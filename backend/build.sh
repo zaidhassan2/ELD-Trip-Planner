@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -e
+pip install -r requirements.txt
+python manage.py collectstatic --no-input
 python manage.py migrate --noinput
-gunicorn eld_backend.wsgi:application --bind 0.0.0.0:${PORT:-8000}
