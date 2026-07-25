@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { MapPin, Search, X, Loader2, AlertCircle, CheckCircle2 } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_URL || '';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://eld-trip-planner-b7en.onrender.com';
 const DEBOUNCE_MS = 300;
 const MIN_QUERY_LEN = 2;
 

@@ -1,4 +1,5 @@
-const API_BASE = import.meta.env.VITE_API_URL || '';
+// Falls back to the deployed Render backend when VITE_API_URL is not set
+const API_BASE = import.meta.env.VITE_API_URL || 'https://eld-trip-planner-b7en.onrender.com';
 
 let _inFlight = false; // prevent double-submit
 
