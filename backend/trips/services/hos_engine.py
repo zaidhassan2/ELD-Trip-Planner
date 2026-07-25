@@ -583,10 +583,10 @@ def generate_trip_schedule(
     # Validate cycle hours
     if cycle < 0:
         raise ValueError("Current cycle used hours cannot be negative.")
-    if cycle > CYCLE_LIMIT_HOURS:
+    if cycle >= CYCLE_LIMIT_HOURS:
         raise ValueError(
-            f"Current cycle used hours ({cycle:.1f}) exceeds the 70-hr limit. "
-            "The driver cannot legally start a trip without a 34-hr restart first."
+            f"Cycle used is {cycle:.1f} hrs — the driver has reached the 70-hr/8-day limit "
+            "and cannot legally drive. A 34-hour restart is required before this trip."
         )
 
     engine = HOSEngine(
